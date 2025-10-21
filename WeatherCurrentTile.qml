@@ -22,19 +22,25 @@ Item {
                 bold: true
             }
         }
-
-        Image {
-            source: "assets/icons/cloudy.png"
-
+        Rectangle {
+            color: "transparent"
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            fillMode: Image.PreserveAspectFit
-            width: 10
-            height: 10
+            Image {
+                source: "assets/icons/cloudy.png"
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+
+                fillMode: Image.PreserveAspectFit
+                width: 100
+                height: 100
+            }
         }
 
-        RowLayout
+        ColumnLayout
         {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -45,7 +51,9 @@ Item {
 
                 color: "#e0e1dd"
 
-                text: (Math.round(WeatherApp.currentTemp * 100) / 100) + " °C"
+                Layout.alignment: Qt.AlignHCenter
+
+                text: "Temperatura: " + (Math.round(WeatherApp.currentTemp * 100) / 100) + " °C"
 
                 font {
                     pixelSize: 16
@@ -58,9 +66,11 @@ Item {
 
                 color: "#e0e1dd"
 
-                text: "Wilg.: " + WeatherApp.currentHumid + " %"
+                text: "Wilgotnosć: " + WeatherApp.currentHumid + " %"
 
                 horizontalAlignment: Text.AlignHCenter
+
+                Layout.alignment: Qt.AlignHCenter
 
                 font {
                     pixelSize: 16

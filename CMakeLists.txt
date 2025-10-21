@@ -26,6 +26,9 @@ qt_add_qml_module(appHomeCenterUI
         QML_FILES WeatherCurrentTile.qml
         QML_FILES StocksTile.qml
         QML_FILES WeatherBmeTile.qml
+        QML_FILES LogTile.qml
+        QML_FILES LogModel.qml
+        RESOURCES assets/icons/cloudy.png assets/icons/menu.png assets/icons/setting.png assets/icons/sun.png assets/icons/warning.png assets/icons/wifi.png
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

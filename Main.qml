@@ -232,6 +232,10 @@ Window {
             Layout.row: 1
             Layout.column: 2
             color: "#1b263b"
+
+            LogTile {
+                anchors.fill: parent
+            }
         }
     }
 }
