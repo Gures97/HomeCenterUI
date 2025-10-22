@@ -1,8 +1,13 @@
 import QtQuick
 import QtQuick.Layouts
+import com.company.StocksApp
 
 Item {
     id: root
+
+    function doubleToString(value){
+        return "" + (Math.round(value * 100) / 100)
+    }
 
     ColumnLayout {
 
@@ -13,7 +18,7 @@ Item {
 
             color: "#e0e1dd"
 
-            text: "ETFSP500"
+            text: StocksApp.currentStockName
 
             font {
                 pixelSize: 20
@@ -28,9 +33,9 @@ Item {
         Text {
             id: percentText
 
-            color: "darkgreen"
+            color: (StocksApp.currentStockChange > 0 ? "darkgreen" : "darkred")
 
-            text: "+1,23%"
+            text: (StocksApp.currentStockChange > 0 ? "+" : "") + doubleToString(StocksApp.currentStockChange) + "%"
 
             font {
                 pixelSize: 30
@@ -56,7 +61,7 @@ Item {
                 }
 
                 Text {
-                    text: "245,70"
+                    text: doubleToString(StocksApp.currentStockMin)
                     color: "#e0e1dd"
                     Layout.alignment: Qt.AlignHCenter
                 }
@@ -72,7 +77,7 @@ Item {
                 }
 
                 Text {
-                    text: "249,70"
+                    text: doubleToString(StocksApp.currentStockValue)
                     color: "#e0e1dd"
                     Layout.alignment: Qt.AlignHCenter
                 }
@@ -88,7 +93,7 @@ Item {
                 }
 
                 Text {
-                    text: "252,35"
+                    text: doubleToString(StocksApp.currentStockMax)
                     color: "#e0e1dd"
                     Layout.alignment: Qt.AlignHCenter
                 }
