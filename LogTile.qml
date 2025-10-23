@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import com.company.SystemLog
 
 Item {
     id: root
@@ -44,11 +45,11 @@ Item {
 
         ListView {
             anchors.fill: parent
-            model: LogModel {}
+            model: SystemLog
             delegate: Item {
                 id: myItem
-                required property string type
-                required property string content
+                required property string logShortDescription
+                required property string logExtendedDescription
                 width: 180; height: 40
                 Rectangle {
                     color: "grey"
@@ -61,7 +62,7 @@ Item {
                         width: 30
                         height: 30
                     }
-                    Text { text: myItem.content; color:"white" }
+                    Text { text: myItem.logShortDescription; color:"white" }
                 }
             }
             spacing: 5

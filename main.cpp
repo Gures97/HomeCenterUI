@@ -1,5 +1,6 @@
 #include "miscinfo.h"
 #include "stocksapp.h"
+#include "systemlog.h"
 #include "weatherapp.h"
 
 #include <QGuiApplication>
@@ -14,10 +15,12 @@ int main(int argc, char *argv[])
     MiscInfo *miscInfo = new MiscInfo(&app);
     WeatherApp *weatherApp = new WeatherApp(&app);
     StocksApp *stocksApp = new StocksApp(&app);
+    SystemLog *systemLog = new SystemLog(&app);
 
     qmlRegisterSingletonInstance("com.company.MiscInfo",1,0,"MiscInfo", miscInfo);
     qmlRegisterSingletonInstance("com.company.WeatherApp",1,0,"WeatherApp", weatherApp);
     qmlRegisterSingletonInstance("com.company.StocksApp",1,0,"StocksApp", stocksApp);
+    qmlRegisterSingletonInstance("com.company.SystemLog",1,0,"SystemLog", systemLog);
 
     QObject::connect(
         &engine,

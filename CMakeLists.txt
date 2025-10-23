@@ -31,6 +31,8 @@ qt_add_qml_module(appHomeCenterUI
         RESOURCES assets/icons/cloudy.png assets/icons/menu.png assets/icons/setting.png assets/icons/sun.png assets/icons/warning.png assets/icons/wifi.png
         QML_FILES SideBar.qml
         SOURCES stocksapp.h stocksapp.cpp
+        SOURCES systemlog.h systemlog.cpp
+        SOURCES logelement.h logelement.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
