@@ -9,7 +9,18 @@ Window {
     visible: true
     title: qsTr("HomeCenter")
 
-    color: "#415a77"
+    Rectangle {
+        anchors.fill: parent
+        color: "#415a77"
+        gradient: Gradient {
+                 GradientStop { position: 1.0; color: Qt.lighter("#415a77") }
+                 GradientStop { position: 0.5; color: "#415a77" }
+                 GradientStop { position: 0.0; color: Qt.darker("#415a77") }
+             }
+    }
+
+
+
 
     SideBar {
         id: sideBar
@@ -95,6 +106,12 @@ Window {
             Layout.row: 0
             Layout.column: 0
             color: "#1b263b"
+            gradient: Gradient {
+                     GradientStop { position: 1.0; color: Qt.lighter("#1b263b") }
+                     GradientStop { position: 0.5; color: "#1b263b" }
+                     GradientStop { position: 0.0; color: Qt.darker("#1b263b") }
+                 }
+            border.color: "#e0e1dd"
 
             ClockTile {
                 anchors.fill: parent
@@ -109,6 +126,12 @@ Window {
 
 
             color: "#1b263b"
+            gradient: Gradient {
+                     GradientStop { position: 1.0; color: Qt.lighter("#1b263b") }
+                     GradientStop { position: 0.5; color: "#1b263b" }
+                     GradientStop { position: 0.0; color: Qt.darker("#1b263b") }
+                 }
+            border.color: "#e0e1dd"
 
             WeatherCurrentTile {
                 anchors.fill: parent
@@ -133,6 +156,12 @@ Window {
             Layout.row: 0
             Layout.column: 2
             color: "#1b263b"
+            gradient: Gradient {
+                     GradientStop { position: 1.0; color: Qt.lighter("#1b263b") }
+                     GradientStop { position: 0.5; color: "#1b263b" }
+                     GradientStop { position: 0.0; color: Qt.darker("#1b263b") }
+                 }
+            border.color: "#e0e1dd"
 
             WeatherBmeTile {
                 anchors.fill: parent
@@ -145,6 +174,12 @@ Window {
             Layout.row: 1
             Layout.column: 0
             color: "#1b263b"
+            gradient: Gradient {
+                     GradientStop { position: 1.0; color: Qt.lighter("#1b263b") }
+                     GradientStop { position: 0.5; color: "#1b263b" }
+                     GradientStop { position: 0.0; color: Qt.darker("#1b263b") }
+                 }
+            border.color: "#e0e1dd"
 
             StocksTile {
                 id: stocksTile
@@ -158,6 +193,12 @@ Window {
             Layout.row: 1
             Layout.column: 1
             color: "#1b263b"
+            gradient: Gradient {
+                     GradientStop { position: 1.0; color: Qt.lighter("#1b263b") }
+                     GradientStop { position: 0.5; color: "#1b263b" }
+                     GradientStop { position: 0.0; color: Qt.darker("#1b263b") }
+                 }
+            border.color: "#e0e1dd"
         }
 
         Rectangle {
@@ -166,6 +207,12 @@ Window {
             Layout.row: 1
             Layout.column: 2
             color: "#1b263b"
+            gradient: Gradient {
+                     GradientStop { position: 1.0; color: Qt.lighter("#1b263b") }
+                     GradientStop { position: 0.5; color: "#1b263b" }
+                     GradientStop { position: 0.0; color: Qt.darker("#1b263b") }
+                 }
+            border.color: "#e0e1dd"
 
             LogTile {
                 anchors.fill: parent
